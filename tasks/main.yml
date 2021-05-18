@@ -1,21 +1,21 @@
 ---
-# tasks file for hetzner_storage
-#- name: Include OS Specific variables
-#  include_vars: "{{ item }}"
-#  with_first_found:
-#    - "{{ ansible_distribution }}{{ ansible_distribution_major_version }}.yml"
-#    - "{{ ansible_os_family }}.yml"
-#
-#- name: Install samba related packages
-#  package:
-#    name: "{{ item }}"
-#    state: latest
-#  loop: "{{ packages }}"
-#
-#- name: Copy credentials file
-#  template:
-#    src: hetzner_storage_box_creds.j2
-#    dest: "{{ credentials_file }}"
+ tasks file for hetzner_storage
+- name: Include OS Specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}{{ ansible_distribution_major_version }}.yml"
+    - "{{ ansible_os_family }}.yml"
+
+- name: Install samba related packages
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ packages }}"
+
+- name: Copy credentials file
+  template:
+    src: hetzner_storage_box_creds.j2
+    dest: "{{ credentials_file }}"
 
 #- name: "Add mount to /etc/fstab"
 #  lineinfile:
