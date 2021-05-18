@@ -36,7 +36,7 @@ Example Playbook
 - name: Include Hetzner storage setup role
   hosts: servers #Server group / IP Address / Server hostname in hosts inventory
   roles:
-  - hetzner_storage
+  - jmutai.hetzner_storage_box_role
   vars:
     storage_box_username: <username>         #Storage box share username
     storage_box_password: <password>        #Storage box share user password
@@ -57,6 +57,13 @@ ansible_become_method=sudo
 
 [servers]
 #List server addresses below, one per line
+```
+
+Download role from galaxy
+-------------------------
+
+```
+ansible-galaxy install jmutai.hetzner_storage_box_role
 ```
 
 License
