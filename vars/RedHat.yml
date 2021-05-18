@@ -1,0 +1,7 @@
+---
+packages:
+  - samba-client
+  - samba-common
+  - cifs-utils
+  - rsync
+  - openssh-clients

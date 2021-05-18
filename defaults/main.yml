@@ -1,0 +1,3 @@
+---
+# defaults file for hetzner_storage
+credentials_file: /etc/storage_box_creds.txt

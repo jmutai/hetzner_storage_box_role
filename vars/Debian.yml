@@ -1,0 +1,4 @@
+---
+packages:
+  - cifs-utils
+  - openssh-client
