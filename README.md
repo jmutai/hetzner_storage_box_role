@@ -14,8 +14,6 @@ Role Variables
 Set below variables in playbook file:
 
 ```
-$ hetzner_storage.yml
----
     vars:
       storage_box_username:         #Storage box share username
       storage_box_password:         #Storage box share user password
