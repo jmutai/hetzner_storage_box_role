@@ -29,6 +29,6 @@
     src: "//{{ storage_box_username }}.your-storagebox.de/backup"
     fstype: cifs
     opts: "iocharset=utf8,rw,credentials={{ credentials_file }},uid={{ item.mount_system_user }},gid={{ item.mount_system_group }},file_mode=0660,dir_mode=0770"
-    state: mounted
+    state: present
   loop: "{{ hetzner_storage_box_fstab }}"
 
